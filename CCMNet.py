@@ -818,5 +818,5 @@ class CCMNet(nn.Module):
         gt_pre4 = torch.sigmoid(gt_pre4)
         gt_pre5 = torch.sigmoid(gt_pre5)
 
-        final_out = (gt_pre5, gt_pre4, gt_pre3, gt_pre2, gt_pre1), (weight1, weight2, weight3), torch.sigmoid(out)
-        return final_out
+        # final_out = (gt_pre5, gt_pre4, gt_pre3, gt_pre2, gt_pre1), (weight1, weight2, weight3), torch.sigmoid(out)
+        return torch.sigmoid(out)
